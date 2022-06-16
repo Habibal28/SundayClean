@@ -15,9 +15,7 @@ use App\Http\Controllers\SendWhatsapp;
 |
 */
 
-Route::get('/', function () {
-    return view('landing-page');
-})->name("landing-page");
+
 // Route::get('/admin-login', function () {
 //     return view('login');
 // });
@@ -36,12 +34,24 @@ Route::get('/service', function () {
 Route::get('/admin-dashboard', [AdminController::class,'index']);
 Route::get('/admin-login', [AdminController::class,'login']);
 Route::post('/admin-login', [AdminController::class,'loginStore']);
+Route::get('/admin-promo', [AdminController::class,'promo']);
+Route::post('/promo-store', [AdminController::class,'promoStore']);
+Route::get('/admin-service', [AdminController::class,'serviceAdmin']);
+Route::post('/tambah-service', [AdminController::class,'serviceStore']);
+Route::post('/edit-service', [AdminController::class,'serviceEdit']);
+Route::get('/hapus-service/{id}', [AdminController::class,'hapusService']);
+Route::get('/logout', [AdminController::class,'logout']);
+
+Route::get('/', [CustomerController::class,'landingPage']);
 Route::get('/admin-customer', [CustomerController::class,'index'])->name('adminCustomer');
-Route::get('/send-wa',[SendWhatsapp::class,'sendWa'])->name('sendWa');
 Route::get('/hapus-customer/{id}', [CustomerController::class,'hapusCustomer']);
 Route::post('/edit-customer', [CustomerController::class,'editCustomer']);
 Route::post('/tambah-customer', [CustomerController::class,'tambahCustomer']);
 Route::post('/store-customer', [CustomerController::class,'storeCustomer']);
+Route::get('/service', [CustomerController::class,'service']);
+
+Route::post('/send-wa',[SendWhatsapp::class,'sendWa'])->name('sendWa');
+
 
 
 

@@ -3,18 +3,21 @@
 @section('content')
 <section>
   <div class="container card-wrapper">
-    <div class="row atas justify-content-center">
-      <div class="col-md-4 col-sm-12 col-lg-3">
+    <div class="row atas justify-content-around">
+      @foreach($service as $row)
+        
+      <div class="col-md-4 col-sm-12 col-lg-3 mb-5">
         <div class="card" style="width: 18rem">
-          <img src="assets/image/service1.svg" class="card-img-top" alt="..." />
+          <img src="{{ asset('storage/' . $row->image) }}" class="card-img-top" alt="..." />
           <div class="card-body">
-            <h5 class="card-title">DEEP CLEAN</h5>
-            <p class="card-text">Cuci sepatu keseluruhan hingga seperti baru</p>
-            <a href="#" class="btn">Start From 30.000</a>
+            <h5 class="card-title">{{$row->nama}}</h5>
+            <p class="card-text">{{$row->isi}}</p>
+            <a href="#" class="btn">Start From {{$row->harga}}</a>
           </div>
         </div>
       </div>
-      <div class="col-md-4 col-sm-12 col-lg-3">
+      @endforeach
+      {{-- <div class="col-md-4 col-sm-12 col-lg-3">
         <div class="card" style="width: 18rem">
           <img src="assets/image/service2.svg" class="card-img-top" alt="..." />
           <div class="card-body">
@@ -33,9 +36,9 @@
             <a href="#" class="btn">Start From 60.000</a>
           </div>
         </div>
-      </div>
+      </div> --}}
     </div>
-    <div class="row justify-content-center">
+    {{-- <div class="row justify-content-center">
       <div class="col-md-4 col-sm-12 col-lg-3">
         <div class="card" style="width: 18rem">
           <img src="assets/image/service4.svg" class="card-img-top" alt="..." />
@@ -66,7 +69,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> --}}
   </div>
 </section>
 

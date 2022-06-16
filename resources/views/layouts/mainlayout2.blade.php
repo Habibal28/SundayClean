@@ -20,7 +20,6 @@
     <link href="assets/css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
 
-  
   <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -184,7 +183,7 @@
     <!-- Page level custom scripts -->
     <script src="assets/js/demo/chart-area-demo.js"></script>
     <script src="assets/js/demo/chart-pie-demo.js"></script>
-    {{-- <script src="assets/js/admin-service.js"></script> --}}
-    <script src="assets/js/admin.js"></script>
+    <script src="assets/js/admin-service.js"></script>
+    {{-- <script src="assets/js/admin.js"></script> --}}
   </body>
 </html>

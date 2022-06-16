@@ -34,6 +34,11 @@ section {
     margin: auto;
     padding: 20px 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 header {
     background-color: var(--main-color);
 }
@@ -253,6 +258,21 @@ header {
 
 /* end handle */
 
+/* start promo */
+
+.container.promo-wrapper {
+    width: 75%;
+    margin: auto;
+}
+
+.promo-wrapper h1 {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+}
+
+/* end promo */
+
 /* start About US */
 
 .container.about-wrapper {
@@ -270,6 +290,12 @@ header {
 .about-us-left h3 {
     font-size: 54px;
     font-weight: 700;
+}
+
+.about-us-left p {
+    width: 300px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .about-wrapper .about-box {
@@ -291,8 +317,27 @@ header {
     width: 680px;
     height: 110px;
     border-radius: 10px;
-    background-color: #000000;
+    background-color: var(--main-color);
     margin-top: 20px;
+}
+
+.about-us-right h5 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #fff;
+    padding: 5px 15px;
+}
+
+.about-us-right p {
+    font-weight: 400;
+    font-size: 16px;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.about-link-large h5,
+.about-link-large p {
+    padding: 8px;
 }
 
 .container.display {
@@ -323,6 +368,11 @@ header {
     justify-content: space-around;
 }
 
+.card-wrapper {
+    margin: auto;
+    /* background-color: #000000; */
+}
+
 .from-customer-box .box-link {
     width: 167px;
     height: 143px;
@@ -330,6 +380,25 @@ header {
     background-color: var(--main-color);
 }
 
+.from-customer-wrapper .card-wrapper .card {
+    height: 480px !important;
+}
+.card .box-card {
+    /* background-color: #000000; */
+    height: 70%;
+    position: relative;
+    /* margin-bottom: 100px; */
+    border-radius: 12px 12px 0px 0px;
+}
+
+.card-box img {
+    position: absolute;
+    width: 100%;
+}
+
+.card .card-body {
+    /* padding-top: 120px; */
+}
 /* end from customer */
 
 /* start subscribe */

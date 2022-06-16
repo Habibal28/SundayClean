@@ -13,11 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customer', function (Blueprint $table) {
-            $table->bigIncrements('id_customer')->autoIncrement();
-            $table->string('nama', 100);
-            $table->text('telp');
-            $table->text('alamat');
+        Schema::create('promo', function (Blueprint $table) {
+            $table->bigIncrements('id_promo')->autoIncrement();
+            $table->string('image', 255);
             $table->timestamps();
         });
     }
@@ -29,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        
     }
 };

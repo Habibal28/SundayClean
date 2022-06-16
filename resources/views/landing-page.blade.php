@@ -56,17 +56,61 @@
 </section>
 
 <section>
-  <div class="container about-wrapper">
+  <div class="container promo-wrapper">
+    <h1 class="mb-3">Promo</h1>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="assets/image/promo-fix.jpeg" class="d-block w-100" alt="...">
+        </div>
+        @foreach($promo as $row)
+        <div class="carousel-item">
+          <img src="{{asset('storage/' . $row->image)}}" class="d-block w-100" alt="...">
+        </div>
+        @endforeach
+       
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container about-wrapper" id="about">
     <div class="about-us-left">
       <h3>About US</h3>
-      <div class="about-box"></div>
+      <p>Sunday Clean merupakan Jasa Cuci Sepatu yang telah berpengalaman selama bertahun tahun.
+        Sangat mengutamakan kesenangan customer dan terus melakukan inovasi.
+        </p>
+      {{-- <div class="about-box"></div> --}}
     </div>
     <div class="about-us-right">
       <div class="about-link">
-        <div class="about-box"></div>
-        <div class="about-box"></div>
+        <div class="about-box">
+          <h5>3</h5>
+          <p>Tahun Pengalaman</p>
+        </div>
+        <div class="about-box">
+          <h5>2</h5>
+          <p>Store Buka</p>
+        </div>
       </div>
-      <div class="about-link-large"></div>
+      <div class="about-link-large">
+        <h5>100+</h5>
+          <p>Customer yang telah berlangganan</p>
+      </div>
     </div>
   </div>
   <div class="container display">
@@ -83,12 +127,57 @@
 </section>
 
 <section>
-  <div class="container from-customer-wrapper">
+  <div class="container from-customer-wrapper" id="from-our-customer">
     <h3>From Our Customer</h3>
     <div class="from-customer-box">
+      {{-- <div class="box-link"></div>
       <div class="box-link"></div>
-      <div class="box-link"></div>
-      <div class="box-link"></div>
+      <div class="box-link"></div> --}}
+
+      <div class="container card-wrapper">
+        <div class="row atas justify-content-center .card-from-customer">
+          <div class="col-md-4 col-sm-8 col-lg-3 mb-5" >
+            <div  class="card d-flex " >
+              <div class="box-card">
+                <img src="assets/image/from-customer1.svg" class="card-img-top" alt="..."  />
+              </div>
+              <div class="card-body">
+                {{-- <h5 class="card-title">DEEP CLEAN</h5> --}}
+                <p class="card-text">Sepatu jadi bersih, wangi
+                  Bintang 5 sangat ramah.</p>
+                <a href="#" class="btn">Eddota - Sidoarjo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-8 col-lg-3 mb-5" >
+            <div  class="card d-flex " >
+              <div class="box-card">
+                <img src="assets/image/from-customer2.png" class="card-img-top" alt="..."  />
+              </div>
+              <div class="card-body">
+                {{-- <h5 class="card-title">DEEP CLEAN</h5> --}}
+                <p class="card-text">Sepatu jadi bersih, wangi
+                  Bintang 5 sangat ramah.</p>
+                <a href="#" class="btn">Eddota - Sidoarjo</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-8 col-lg-3 mb-5" >
+            <div  class="card d-flex " >
+              <div class="box-card">
+                <img src="assets/image/from-customer3.svg" class="card-img-top" alt="..."  />
+              </div>
+              <div class="card-body">
+                {{-- <h5 class="card-title">DEEP CLEAN</h5> --}}
+                <p class="card-text">Sepatu jadi bersih, wangi
+                  Bintang 5 sangat ramah.</p>
+                <a href="#" class="btn">Eddota - Sidoarjo</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
     </div>
   </div>
 </section>

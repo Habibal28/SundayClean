@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Promo;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
@@ -47,5 +49,16 @@ class CustomerController extends Controller
         ];
         Customer::create($data);
         return redirect()->route('landing-page');
+    }
+
+    public function landingPage(){
+        $promo = Promo::all();
+        return view("landing-page",compact('promo'));
+    }
+
+    public function service(){
+        $service = Service::all();
+        // dd($service);
+        return view("service",compact('service'));
     }
 }

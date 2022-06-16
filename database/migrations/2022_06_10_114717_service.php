@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('service', function (Blueprint $table) {
             $table->bigIncrements('id_service')->autoIncrement();
             $table->string('nama', 100);
+            $table->text('isi');
             $table->string('harga',100);
             $table->text('image');
             $table->timestamps();

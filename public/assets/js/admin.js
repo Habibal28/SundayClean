@@ -40,24 +40,22 @@ checklistAll.addEventListener("click", function () {
 // submit form with jquery
 $(document).ready(function () {
     $("#form-pesan").on("submit", function (e) {
-        //prevent form from submitting and leaving page
-
-        e.preventDefault();
-
-        $.ajax({
-            method: "get",
-            cache: false,
-            url: "/send-wa",
-            datatype: "html",
-            data: {
-                image: $("#image").val(),
-                pesan: $("#pesan").val(),
-                data: data,
-            },
-            success: function (result) {
-                console.log(result);
-            },
-        });
+        // e.preventDefault();
+        // $.ajax({
+        //     method: "get",
+        //     cache: false,
+        //     url: "/send-wa",
+        //     datatype: "html",
+        //     data: {
+        //         image: $("#image").val(),
+        //         pesan: $("#pesan").val(),
+        //         data: data,
+        //     },
+        //     success: function (result) {
+        //         console.log(result);
+        //     },
+        // });
+        $("#datatelp").val(data);
     });
 });
 
